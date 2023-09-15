@@ -16,12 +16,13 @@
 //#define AIKON20X20_F051
 //#define AIKONSINGLE_F051
 //#define FLYCOLOR_F051
-#define AM32REF_F051
+//#define AM32REF_F051
 //#define BLPWR_F051
 //#define HVFLYCOLOR_F051
 //#define FLASHHOBBY_F051
 //#define SEQURE_G071
 //#define RHINO80A_F051
+#define WROBELESC200A_F051
 
 
 
@@ -287,6 +288,20 @@
 #define PA6_VOLTAGE
 //#define USE_SERIAL_TELEMETRY
 #define USE_CRSF_INPUT
+#define TARGET_STALL_PROTECTION_INTERVAL 9000
+#endif
+
+#ifdef  WROBELESC200A_F051
+#define FILE_NAME				"WROBELESC200A_F051"
+#define FIRMWARE_NAME           "Wrobel ESC"
+#define DEAD_TIME               45
+#define HARDWARE_GROUP_F0_B
+#define MILLIVOLT_PER_AMP       65
+#define CURRENT_OFFSET          0
+#define TARGET_VOLTAGE_DIVIDER  280 // (Rges / R1) * 10 = ((27kOhm + 1kOhm) / 1kOhm) * 10 = 280
+#define PA6_VOLTAGE
+//#define USE_SERIAL_TELEMETRY
+//#define USE_CRSF_INPUT
 #define TARGET_STALL_PROTECTION_INTERVAL 9000
 #endif
 
