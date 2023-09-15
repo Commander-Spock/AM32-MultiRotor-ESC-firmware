@@ -342,7 +342,7 @@ char low_rpm_throttle_limit = 1;
 uint16_t low_voltage_count = 0;
 uint16_t telem_ms_count;
 
-char VOLTAGE_DIVIDER = TARGET_VOLTAGE_DIVIDER;     // 100k upper and 10k lower resistor in divider
+uint16_t VOLTAGE_DIVIDER = TARGET_VOLTAGE_DIVIDER;     // 100k upper and 10k lower resistor in divider
 uint16_t battery_voltage;  // scale in volts * 10.  1260 is a battery voltage of 12.60
 char cell_count = 0;
 char brushed_direction_set = 0;
