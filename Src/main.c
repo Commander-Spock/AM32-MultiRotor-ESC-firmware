@@ -1130,7 +1130,7 @@ void tenKhzRoutine()
 
 		tenkhzcounter = 0;
 	}
-	if (!armed && (cell_count == 0))
+	if (!armed)
 	{
 		if (inputSet)
 		{
@@ -1966,7 +1966,7 @@ int main(void)
 				if (battery_voltage < (cell_count * low_cell_volt_cutoff))
 				{
 					low_voltage_count++;
-					if (low_voltage_count > (20000 - (stepper_sine * 900)))
+					if (low_voltage_count > (5000))
 					{
 						input = 0;
 						allOff();

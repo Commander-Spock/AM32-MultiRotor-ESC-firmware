@@ -13,7 +13,7 @@ extern uint16_t armed_count_threshold;
 extern char forward;
 extern uint8_t running;
 extern uint16_t zero_input_count;
-extern uint16_t signaltimeout;
+extern uint32_t signaltimeout;
 extern uint16_t input;
 extern uint16_t newinput;
 extern char play_tone_flag;
