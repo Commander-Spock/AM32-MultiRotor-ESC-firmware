@@ -299,7 +299,6 @@
 #define MILLIVOLT_PER_AMP       25
 #define CURRENT_OFFSET          0
 #define TARGET_VOLTAGE_DIVIDER  280 // (Rges / R1) * 10 = ((27kOhm + 1kOhm) / 1kOhm) * 10 = 280
-#define PA6_VOLTAGE
 #define TARGET_STALL_PROTECTION_INTERVAL 9000
 #endif
 
