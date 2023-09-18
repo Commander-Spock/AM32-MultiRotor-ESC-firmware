@@ -522,7 +522,7 @@ uint16_t duty_cycle = 0;
 char step = 1;
 uint16_t commutation_interval = 12500;
 uint16_t waitTime = 0;
-uint16_t signaltimeout = 0;
+uint32_t signaltimeout = 0;
 uint8_t ubAnalogWatchdogStatus = RESET;
 
 void checkForHighSignal()
@@ -1548,11 +1548,11 @@ void tenKhzRoutine()
 			{
 				dma_buffer[i] = 0;
 			}
-			NVIC_SystemReset();
+			// NVIC_SystemReset();
 		}
 
-		if (signaltimeout > 25000)
-		{ // 2.5 second
+		if (signaltimeout > 100000)
+		{ // 10 second
 			allOff();
 			armed = 0;
 			input = 0;

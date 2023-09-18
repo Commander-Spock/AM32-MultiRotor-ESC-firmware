@@ -230,9 +230,11 @@ void transfercomplete()
 			}
 			if (servoPwm == 1)
 			{
-				while ((INPUT_PIN_PORT->IDR & INPUT_PIN))
-				{ // if the pin is high wait
-				}
+				// The program gets stuck here if there is no signal anymore
+				//while ((INPUT_PIN_PORT->IDR & INPUT_PIN))
+				//{ // if the pin is high wait
+				//}
+				// Works even if the while loop is commented out.
 				computeServoInput();
 
 				LL_TIM_IC_SetPolarity(IC_TIMER_REGISTER, IC_TIMER_CHANNEL, LL_TIM_IC_POLARITY_RISING); // setup rising pin trigger.
